@@ -106,15 +106,24 @@ def undo_recent():
     turtle.undo()
 
 def instructions():
+    backward(175)
+    right(90)
+    forward(10)
     pensize(5)
-    write("Weclome to Feather Dip! " \
-    "to draw, click on the arrow and drag it, the arrow will also go to where ever you click on the screen" \
-    "to change colors, input any of these: r(red), b(blue), g(green), y(yellow), p(purple), d(black), o(orange), t(teal), and w(white)" \
-    "some of these also require shift to access more colors like B(brown), G(gold), and P(pink), as g and G and treated differently" \
-    "you can press (<) to undo things, and any of the number keys to change pen size" \
-    "comma (,) will start fill when drawing and period (.) wll end fill, z will clear the board" \
-    "to bring this back up, enter (?)")
-    pensize(1)
+    write("Weclome to Feather Dip! ")
+    forward(9)
+    write("to draw, click on the arrow and drag it, the arrow will also go to where ever you click on the screen")
+    forward(9)
+    write("to change colors, input any of these: r(red), b(blue), g(green), y(yellow), p(purple), d(black), o(orange), t(teal), and w(white)")
+    forward(9)
+    write("some of these also require shift to access more colors like B(brown), G(gold), and P(pink), as g and G and treated differently")
+    forward(9)
+    write("you can press (<) to undo things, and any of the number keys to change pen size")
+    forward(9)
+    write("comma (,) will start fill when drawing and period (.) wll end fill, z will clear the board")
+    forward(9)
+    write("to bring this back up, enter (?)")
+    pensize(9)
 
 # default settings
 penup()
@@ -216,5 +225,6 @@ getscreen().listen()
 
 # function calls
 getscreen().onclick(goto_mouse)
+instructions()
 ondrag(drag)
 mainloop()
