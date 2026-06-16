@@ -9,7 +9,8 @@ import keyboard
 
 t = turtle.Turtle()
 
-# Screen().bgpic(r".gif")
+Screen().bgpic(r"even BETTER background.gif")
+
 
 def goto_mouse(x, y):
     # move to mouse cursor
@@ -109,7 +110,7 @@ def instructions():
     backward(175)
     right(90)
     forward(10)
-    pensize(5)
+    pensize(1)
     write("Weclome to Feather Dip! ")
     forward(11)
     write("to draw, click on the arrow and drag it, the arrow will also go to where ever you click on the screen")
@@ -225,6 +226,6 @@ getscreen().listen()
 
 # function calls
 getscreen().onclick(goto_mouse)
-instructions()
+# instructions()
 ondrag(drag)
 mainloop()
