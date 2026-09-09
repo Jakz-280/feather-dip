@@ -99,26 +99,6 @@ def clear_board():
 def undo_recent():
     undo()
 
-# def instructions():
-#     backward(175)
-#     right(90)
-#     forward(10)
-#     pensize(1)
-#     write("Welcome to Feather Dip! ")
-#     forward(11)
-#     write("to draw, click on the arrow and drag it, the arrow will also go to where ever you click on the screen")
-#     forward(11)
-#     write("to change colors, input any of these: r(red), b(blue), g(green), y(yellow), p(purple), d(black), o(orange), t(teal), and w(white)")
-#     forward(11)
-#     write("some of these also require shift to access more colors like B(brown), G(gold), and P(pink), as g and G and treated differently")
-#     forward(11)
-#     write("you can press (<) to undo things, and any of the number keys to change pen size")
-#     forward(11)
-#     write("comma (,) will start fill when drawing and period (.) wll end fill, z will clear the board")
-#     forward(11)
-#     write("to bring this back up, enter (?)")
-#     pensize(11)
-
 # default settings
 penup()
 speed("fastest")
@@ -166,7 +146,6 @@ getscreen().listen()
 
 getscreen().onkey(color_eraser, "w")
 getscreen().listen()
-
 
 # Begin and end fill
 getscreen().onkey(begin_fill, ",")
