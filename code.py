@@ -1,13 +1,5 @@
 # imports
-import turtle
 from turtle import *
-TurtleScreen
-from PIL import Image, ImageTk
-import pygame
-from turtle import Turtle, Screen
-import keyboard
-
-t = turtle.Turtle()
 
 Screen().bgpic(r"Fixed FeatherDIp UI.gif")
 
@@ -25,7 +17,6 @@ def drag(x, y):
         setheading(towards(x, y))
         goto(x, y)
         ondrag(drag)
-        print(x, y)
 
 # colors
 def color_red():
@@ -103,30 +94,30 @@ def size_10():
 
 # Other
 def clear_board():
-    turtle.clear()
+    clear()
 
 def undo_recent():
-    turtle.undo()
+    undo()
 
-def instructions():
-    backward(175)
-    right(90)
-    forward(10)
-    pensize(1)
-    write("Welcome to Feather Dip! ")
-    forward(11)
-    write("to draw, click on the arrow and drag it, the arrow will also go to where ever you click on the screen")
-    forward(11)
-    write("to change colors, input any of these: r(red), b(blue), g(green), y(yellow), p(purple), d(black), o(orange), t(teal), and w(white)")
-    forward(11)
-    write("some of these also require shift to access more colors like B(brown), G(gold), and P(pink), as g and G and treated differently")
-    forward(11)
-    write("you can press (<) to undo things, and any of the number keys to change pen size")
-    forward(11)
-    write("comma (,) will start fill when drawing and period (.) wll end fill, z will clear the board")
-    forward(11)
-    write("to bring this back up, enter (?)")
-    pensize(11)
+# def instructions():
+#     backward(175)
+#     right(90)
+#     forward(10)
+#     pensize(1)
+#     write("Welcome to Feather Dip! ")
+#     forward(11)
+#     write("to draw, click on the arrow and drag it, the arrow will also go to where ever you click on the screen")
+#     forward(11)
+#     write("to change colors, input any of these: r(red), b(blue), g(green), y(yellow), p(purple), d(black), o(orange), t(teal), and w(white)")
+#     forward(11)
+#     write("some of these also require shift to access more colors like B(brown), G(gold), and P(pink), as g and G and treated differently")
+#     forward(11)
+#     write("you can press (<) to undo things, and any of the number keys to change pen size")
+#     forward(11)
+#     write("comma (,) will start fill when drawing and period (.) wll end fill, z will clear the board")
+#     forward(11)
+#     write("to bring this back up, enter (?)")
+#     pensize(11)
 
 # default settings
 penup()
@@ -223,11 +214,9 @@ getscreen().listen()
 getscreen().onkey(undo_recent, "<")
 getscreen().listen()
 
-getscreen().onkey(instructions, "?")
-getscreen().listen()
-
 # function calls
 getscreen().onclick(goto_mouse)
+
 # instructions()
 ondrag(drag)
 mainloop()
