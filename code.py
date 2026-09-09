@@ -9,7 +9,7 @@ import keyboard
 
 t = turtle.Turtle()
 
-Screen().bgpic(r"even BETTER background.gif")
+Screen().bgpic(r"Fixed FeatherDIp UI.gif")
 
 
 def goto_mouse(x, y):
@@ -20,10 +20,12 @@ def goto_mouse(x, y):
 
 def drag(x, y):
     # move to mouse cursor
-    ondrag(None)
-    setheading(towards(x, y))
-    goto(x, y)
-    ondrag(drag)
+    if (-483 < x and 858 > x) and (-380 < y and 340 > y):
+        ondrag(None)
+        setheading(towards(x, y))
+        goto(x, y)
+        ondrag(drag)
+        print(x, y)
 
 # colors
 def color_red():
@@ -111,7 +113,7 @@ def instructions():
     right(90)
     forward(10)
     pensize(1)
-    write("Weclome to Feather Dip! ")
+    write("Welcome to Feather Dip! ")
     forward(11)
     write("to draw, click on the arrow and drag it, the arrow will also go to where ever you click on the screen")
     forward(11)
