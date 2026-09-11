@@ -12,7 +12,7 @@ def goto_mouse(x, y):
 
 def drag(x, y):
     # move to mouse cursor
-    if (-483 < x and 858 > x) and (-380 < y and 340 > y):
+    if (-490 < x and 865 > x) and (-385 < y and 345 > y):
         ondrag(None)
         setheading(towards(x, y))
         goto(x, y)
